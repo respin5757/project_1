@@ -37,7 +37,7 @@ Usage: project_1 string difficulty #trials
 
 ## Setting up GCP
 1. Sign up for an account **with your BC email** on [Google Cloud Platform](https://cloud.google.com).  
-2. Apply [here](https://google.secure.force.com/GCPEDU?cid=qK5GptnHvOd1Azky9STHgTXZKL0TQBk8k%2BgpC7W6XDRhxyd1yHT7DqKeE2yLVLeQ) for the course's pre-approved credits. GCP will request that you verify your email address first.  
+2. Apply [here](https://gcp.secure.force.com/GCPEDU?cid=BN4kmrA%2FvixPNwziAGxU23iJIZJ0dM%2FvIVZMase2sZUHDPnhHpzcLp4%2B7lBIGH9G/) for the course's pre-approved credits. GCP will request that you verify your email address first.  
 3. Once you verify your email address, you'll receive an email allowing you to redeem your credits. It links to a page where you can redeem using the coupon code GCP provides you.  
 4. You should now have $50 in credit. You can verify this by doing the following:  
   a. Open the navigation menu in the top left corner.  
