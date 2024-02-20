@@ -7,7 +7,7 @@ If you're unfamiliar with version control systems, especially Git, please consul
   a.	Be sure to check that the environment variables are set properly.
 
 2.	[Install Spark](https://spark.apache.org/downloads.html)  
-  a.	Select version 3.0.1 with Hadoop 2.7.  
+  a.	Select version 3.5.0 with Hadoop 3.3.  
   b.	After the installation, you may need to set the environment variables properly.  
   c.	To test whether or not everything runs, open a terminal and type `spark-shell`. Now that you are in the Scala interpreter, you can execute Scala code here. For example, you can try `println(“Hello World!”)`. You can exit the shell by typing `:q`.  
   d.	Tip: In the Spark shell, you can test segments of Scala codes before you write them in the file. It's a very convenient way to learn Scala and Spark.   
@@ -25,10 +25,10 @@ Let's build and execute **project_1**.
 2. Run the following command:
 ```
 // Linux
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar
+spark-submit --class project_1.main --master local[*] target/scala-2.13/project_1_2.13-1.0.jar
 
 // Unix
-spark-submit --class "project_1.main" --master "local[*]" target/scala-2.12/project_1_2.12-1.0.jar
+spark-submit --class "project_1.main" --master "local[*]" target/scala-2.13/project_1_2.13-1.0.jar
 ```
 3. Upon successful execution, you should see the message below. Note that `string`, `difficulty`, and `#trials` are the arguments you'll be passing in.
 ```
@@ -57,13 +57,13 @@ Usage: project_1 string difficulty #trials
   b. Version image 2.0 with Debian or Ubuntu (it will look like `2.0-debian10`).  
   c. In the `Customize cluster` page, check the box in the `Scheduled deletion` section that says "Delete after a cluster idle time period without submitted jobs" and specify a 2 hour timeout. This will terminate the cluster in case you forget to manually.  
 7. To execute the project's **.jar** file, you'll need to upload it somewhere accessible to the cluster. This can be accomplished by creating a [GCP storage bucket](https://console.cloud.google.com/storage). Name it `bcusername-csci3390-bucket`, e.g. `smith-csci3390-bucket`. Leave the rest of the settings on their default.  
-8. Upload the **.jar** file located in **target/scala-2.12** in your project directory.  
+8. Upload the **.jar** file located in **target/scala-2.13** in your project directory.  
 9. Back in the **Dataproc** console, select the **Submit Job** button on the **Jobs** page.  
 10. Submit a job with the following configuration:  
   a. Select the cluster you created for **Cluster**.  
   b. `Spark` job type.  
   c. `project_1.main` for the main class.  
-  d. `gs://your-bucket-name/project_1_2.12-1.0.jar` for the **.jar** file.  
+  d. `gs://your-bucket-name/project_1_2.13-1.0.jar` for the **.jar** file.  
   e. A value of 1 for maximum restarts per hour.  
 11. Upon successful execution, you should see `Usage: project_1 string difficulty #trials` as the job output. Cheers to successfully configuring your cloud environment.
 
@@ -86,10 +86,10 @@ The program accepts three parameters: the header string `S`, the difficulty `k`,
 Pass in the arguments by appending them to the `spark-submit` command you ran earlier. For example:
 ```
 // Linux
-spark-submit --class project_1.main --master local[*] target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_12345678 2 100
+spark-submit --class project_1.main --master local[*] target/scala-2.13/project_1_2.13-1.0.jar this_is_a_bitcoin_block_of_12345678 2 100
 
 // Unix
-spark-submit --class "project_1.main" --master "local[*]" target/scala-2.12/project_1_2.12-1.0.jar this_is_a_bitcoin_block_of_12345678 2 100
+spark-submit --class "project_1.main" --master "local[*]" target/scala-2.13/project_1_2.13-1.0.jar this_is_a_bitcoin_block_of_12345678 2 100
 ```
 In GCP, simply include the arguments in the **Arguments** field of the job you're submitting.  
 
