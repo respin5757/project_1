@@ -54,7 +54,7 @@ Usage: project_1 string difficulty #trials
 5. Enable the Cloud Dataproc API.  
 6. Select the **Create Cluster** button and configure your cluster the following way:  
   a. Cluster name `bcusername-csci3390-cluster`, e.g. `smith-csci3390-cluster`.  
-  b. Version image 2.0 with Debian or Ubuntu (it will look like `2.0-debian10`).  
+  b. Version image 2.1 with Debian or Ubuntu (it will look like `2.1-debian11`).  
   c. In the `Customize cluster` page, check the box in the `Scheduled deletion` section that says "Delete after a cluster idle time period without submitted jobs" and specify a 2 hour timeout. This will terminate the cluster in case you forget to manually.  
 7. To execute the project's **.jar** file, you'll need to upload it somewhere accessible to the cluster. This can be accomplished by creating a [GCP storage bucket](https://console.cloud.google.com/storage). Name it `bcusername-csci3390-bucket`, e.g. `smith-csci3390-bucket`. Leave the rest of the settings on their default.  
 8. Upload the **.jar** file located in **target/scala-2.12** in your project directory.  
