@@ -20,7 +20,7 @@ For each difficulty level `k`, the program was run to find a nonce that satisfie
 Using GCP's Dataproc service, the program was configured to solve for difficulty level `k=7`:
 
 - **String and Hash Value**: `1483112146this_is_a_bitcoin_block_of_80948485,000000069ecc67c348630e1eec1a01d911c895e196f345668dd5e97c9cd8f33a`
-- **Number of Trials (n)**: 10,000,000
+- **Number of Trials (n)**: 100,000,000
 - **Time Elapsed**: 330s
 - **Cluster Configuration**:
     - The cluster, named espinorb-csci3390-cluster, was configured with a single master node of type n2-standard-4, which includes 4 vCPUs and 15 GB of memory. It did not utilize any worker nodes. The process for estimating the number of trials needed to find the nonce involved considering the difficulty level and the computational power of the cluster. Given the nature of the task and the hardware capabilities, a larger number of trials was deemed necessary for higher difficulty levels to increase the probability of finding a valid nonce within a reasonable time frame.
